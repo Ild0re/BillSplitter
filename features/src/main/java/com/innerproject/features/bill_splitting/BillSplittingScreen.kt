@@ -78,8 +78,8 @@ fun BillSplittingScreen(
                     false
                 },
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Number, // Только цифры
-                imeAction = ImeAction.Done // Кнопка "Готово"
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Done
             )
         )
 
@@ -102,8 +102,8 @@ fun BillSplittingScreen(
                     false
                 },
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Number, // Только цифры
-                imeAction = ImeAction.Done // Кнопка "Готово"
+                keyboardType = KeyboardType.Number,
+                imeAction = ImeAction.Done
             )
         )
 

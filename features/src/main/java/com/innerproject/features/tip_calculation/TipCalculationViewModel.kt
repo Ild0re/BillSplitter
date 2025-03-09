@@ -19,10 +19,10 @@ class TipCalculationViewModel @Inject constructor() : ViewModel() {
                 _state.update { it.copy(billAmount = event.amount) }
             }
             is TipCalculationEvent.TipPercentageChanged -> {
-                _state.update { it.copy(tipPercentage = event.percentage.toInt()) } // Преобразуем в Int
+                _state.update { it.copy(tipPercentage = event.percentage.toInt()) }
             }
             TipCalculationEvent.Calculate -> {
-                calculateTip() // Вызываем функцию расчета
+                calculateTip()
             }
         }
     }

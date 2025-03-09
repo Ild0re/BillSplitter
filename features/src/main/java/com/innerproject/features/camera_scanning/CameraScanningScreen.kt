@@ -59,7 +59,7 @@ fun CameraScanningScreen(
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceBetween // Располагаем элементы сверху и снизу
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
         if (hasCamPermission) {
             CameraPreview { imageProxy ->
@@ -69,7 +69,7 @@ fun CameraScanningScreen(
 
             Row(
                 modifier = Modifier
-                    .fillMaxWidth() // Кнопки занимают всю ширину
+                    .fillMaxWidth()
                     .padding(16.dp),
                 horizontalArrangement = Arrangement.SpaceAround
             ) {
@@ -88,10 +88,10 @@ fun CameraScanningScreen(
     LaunchedEffect(state.navigateToBillSplitting, state.navigateToTipCalculation) {
         if (state.navigateToBillSplitting) {
             navController.navigate("bill_splitting/${state.extractedAmount}")
-            viewModel.onEvent(CameraScanningEvent.NavigationHandled)  // Reset the flag
+            viewModel.onEvent(CameraScanningEvent.NavigationHandled)
         } else if (state.navigateToTipCalculation) {
             navController.navigate("tip_calculation/${state.extractedAmount}")
-            viewModel.onEvent(CameraScanningEvent.NavigationHandled)  // Reset the flag
+            viewModel.onEvent(CameraScanningEvent.NavigationHandled)
         }
     }
 }

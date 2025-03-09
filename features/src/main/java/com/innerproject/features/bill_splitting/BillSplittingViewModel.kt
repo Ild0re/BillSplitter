@@ -22,7 +22,7 @@ class BillSplittingViewModel @Inject constructor() : ViewModel() {
                 _state.update { it.copy(numberOfPeople = event.number) }
             }
             BillSplittingEvent.Calculate -> {
-                calculateAmountPerPerson() // Вызываем функцию расчета
+                calculateAmountPerPerson()
             }
         }
     }

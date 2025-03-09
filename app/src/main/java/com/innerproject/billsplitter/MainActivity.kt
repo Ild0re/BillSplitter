@@ -51,11 +51,11 @@ class MainActivity : ComponentActivity() {
                     NavHost(
                         navController = navController,
                         startDestination = Screen.BillSplitting.route,
-                        modifier = Modifier.fillMaxSize() // NavHost занимает все доступное пространство
+                        modifier = Modifier.fillMaxSize()
                     ) {composable(Screen.BillSplitting.route) { BillSplittingScreen() }
                         composable(Screen.TipCalculation.route) { TipCalculationScreen() }
                         composable(Screen.CameraScanning.route) {
-                            CameraScanningScreen(navController = navController) // Pass NavController
+                            CameraScanningScreen(navController = navController)
                         }
                         composable("bill_splitting/{amount}") { backStackEntry ->
                             val amount = backStackEntry.arguments?.getString("amount")?.toDoubleOrNull()

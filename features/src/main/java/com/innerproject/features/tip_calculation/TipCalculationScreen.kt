@@ -1,5 +1,6 @@
 package com.innerproject.features.tip_calculation
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,6 +32,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import com.innerproject.features.CustomButton
 import com.innerproject.features.R
 
+@SuppressLint("DefaultLocale")
 @Composable
 fun TipCalculationScreen(
     viewModel: TipCalculationViewModel = hiltViewModel(),
@@ -88,7 +90,7 @@ fun TipCalculationScreen(
         Text("${stringResource(R.string.tip_percentage)} ${state.tipPercentage}")
 
         Slider(
-            value = state.tipPercentage.toFloat(), // Преобразуем в Float для Slider
+            value = state.tipPercentage.toFloat(),
             onValueChange = { viewModel.onEvent(TipCalculationEvent.TipPercentageChanged(it.toDouble())) },
             valueRange = 0f..30f,
             steps = 30
