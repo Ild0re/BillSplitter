@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BillSplitter</string>
+    <string name="bill_splitting">Разделение счета</string>
+    <string name="total_amount">Сумма счета</string>
+    <string name="number_of_people">Количество человек</string>
+    <string name="amount_per_person">Сумма на человека:</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="tip_calculation">Расчет чаевых</string>
+    <string name="bill_amount">Сумма счета</string>
+    <string name="tip_percentage">Процент чаевых:</string>
+    <string name="tip_amount">Сумма чаевых:</string>
+    <string name="total_amount_with_tip">Общая сумма:</string>
+    <string name="camera_scanning">Сканирование камерой</string>
+    <string name="camera_permission_denied">Разрешение на использование камеры не предоставлено</string>
+    <string name="bill_split">Разделить счет</string>
+    <string name="tip_calc">Чаевые</string>
+    <string name="camera">Камера</string>
+</resources>
